@@ -1,72 +1,40 @@
-== Default app
-=== Gems
+# Default app
 
-source 'https://rubygems.org'
+A simple bootstrap for initial rails apps with facebook social login, devise, responders, fontawesome, postgresql, bootstrap_form_for and more.
+Translated to pt-BR  (rails,devise and responders), locale and time
 
-# Rails default gems
-gem 'rails', '4.2.1'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
+### To install
+```
+bundle install
+rake db:create
+rake db:migrate
+```
 
-# Databases
-gem 'pg'
-gem 'searchkick'
+#### Helpers for messagens erros
+Use error_messages(@modelname) for handle erros.
+```
+<%= bootstrap_form_for([:admin, @course, @concept]) do |f| %>
+<%= error_messages(@concept) %>
+<% end %>
+```
 
-# Controllers stuffs
-gem 'responders'
 
-# Authentication and Authorization
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'figaro'
-
-# Frontend stuff, layouts, views and forms
-gem 'bootstrap-sass'
-gem 'font-awesome-sass', '~> 4.3.0'
-gem 'nprogress-rails'
-gem 'bootstrap_form', github: 'bootstrap-ruby/rails-bootstrap-forms'
-gem 'cocoon' 
-gem 'select2-rails'
-gem 'bootsy'
-
-# Social Gems & User tracks
-gem 'socialization'
-gem 'shareable'
-gem 'impressionist'
-
-# Uploads
-gem  'paperclip'
-
-# Geral stuffs
-gem 'open_uri_redirections'
-gem 'friendly_id'
-
-# Development stuff
-group :development do
-	gem 'thin'
-	gem 'quiet_assets'
-end	
-
-# Test stuff
-group :test do
-  gem "factory_girl_rails"
-  gem "capybara"
-  gem "guard-rspec"
+Admin sys use a container_brand to get icons in fontawesome(bootstrap also avaliable)
+``````
+def container_brand(model)
+  case model
+  when 'university'
+    icon('university fa-lg')
+  end
 end
-
-# Development and test stuff
-group :development, :test do
-	gem 'rspec-rails'
-  gem 'rspec-mocks'
-  gem 'rspec-its'
-  gem 'rspec-collection_matchers'
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+``````
+#### Use figaro to handle environments variables.
+```
+figaro install
+```
+Example enviroment variable by figaro (default/config/application.yml)
+```
+development:
+  FACEBOOK_KEY: '1523140284244'
+  FACEBOOK_PASS: c63b1930eesdxccxec72ef17a
+```
