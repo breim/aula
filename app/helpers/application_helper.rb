@@ -23,4 +23,13 @@ module ApplicationHelper
     obj.errors.empty? ? false : true
   end
   # -- messages erros end
+
+  # Admins icons
+  def container_brand(model)
+    case model
+    when 'university'
+      icon('university fa-lg')
+    end
+  end
+
 end

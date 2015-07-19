@@ -10,3 +10,73 @@
 
 /* Local scss */
 @import 'pages';
+
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body{
+  /*background-color: #F7F7F7;*/
+  margin-bottom: 50px;
+}
+
+body > .container{
+  margin-top: 85px;
+}
+
+.panel {
+  margin-bottom: 25px;
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); 
+}
+
+.panel-footer {
+  padding: 5px 15px 5px 15px;
+  background-color: whitesmoke;
+  border-top: 1px solid #dddddd;
+}
+
+.user-container {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+}
+
+/* Gem bootstrap form for */
+label.required:after {
+  content:" *";
+  color: #d9534f;
+}
+
+.user-container-brand{
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  display:block;
+}
+
+.user-container-brand .brand-path{
+  background-color: #3686BE;
+  border: 1px solid #3686BE;
+  margin-left: -20px;
+  margin-right: 10px;
+  padding: 20px;
+  margin-top:20px;
+  color: #fff;
+  position:relative;
+  display: inline;
+}
+
+.new-path-btn{
+	float:right;
+	margin-top: -5px;
+}
