@@ -10,7 +10,7 @@
 
 /* Local scss */
 @import 'pages';
-
+@import 'navbars';
 
 html {
 	position: relative;
@@ -20,6 +20,8 @@ html {
 body{
   /*background-color: #F7F7F7;*/
   margin-bottom: 50px;
+  min-height: 2000px;
+  padding-top: 70px;
 }
 
 body > .container{
