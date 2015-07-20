@@ -37,4 +37,6 @@ Example enviroment variable by figaro (default/config/application.yml)
 development:
   FACEBOOK_KEY: '1523140284244'
   FACEBOOK_PASS: c63b1930eesdxccxec72ef17a
+  SEND_GRID_USER: useruser
+  SEND_GRID_PASSWORD: '5dsa1qwe1qXXRa'
 ```
