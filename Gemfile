@@ -32,6 +32,9 @@ gem 'cocoon'
 gem 'select2-rails'
 gem 'bootsy'
 
+# Emails
+gem 'sendgrid'
+
 # Social Gems & User tracks
 gem 'socialization'
 gem 'shareable'
