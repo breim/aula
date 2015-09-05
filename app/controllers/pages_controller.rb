@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	respond_to :html
-	layout 'home'
+	#layout 'home'
 	
 	def index
 	end

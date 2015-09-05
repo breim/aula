@@ -18,3 +18,13 @@
 //= require select2
 //= require bootsy
 //= require cocoon
+
+// HighlightJs on pre codes 
+
+$(document).ready(function() {
+	$('pre').each(function(i, block) {
+		hljs.configure({useBR: false});
+		hljs.configure({tabReplace: ' ', classPrefix: 'hljs-'});
+		hljs.highlightBlock(block);
+	});
+});
