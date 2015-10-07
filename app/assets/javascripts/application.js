@@ -1,4 +1,4 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
+// Taps is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
@@ -18,13 +18,12 @@
 //= require select2
 //= require bootsy
 //= require cocoon
+//= require rainbows
 
 // HighlightJs on pre codes 
-
 $(document).ready(function() {
-	$('pre').each(function(i, block) {
-		hljs.configure({useBR: false});
-		hljs.configure({tabReplace: ' ', classPrefix: 'hljs-'});
-		hljs.highlightBlock(block);
-	});
+    function showHiddenParagraphs() {
+        $("p.hidden").fadeIn(500);
+    }
+    setTimeout(showHiddenParagraphs, 1000);
 });
